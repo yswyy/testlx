@@ -12,6 +12,7 @@ class Test01:
     @allure.step('第一步')
     def test01(self):
         print('\n你过来啊')
+         allure.attach(self.driver.get_screenshot_as_png(), "淘宝截图", allure.attachment_type.PNG)
 
     @allure.severity(allure.severity_level.CRITICAL)
     @allure.step('第二步')
@@ -21,8 +22,7 @@ class Test01:
 
     @allure.severity(allure.severity_level.NORMAL)
     @allure.step('第三步')
-    def test03(self):
-        allure.attach(self.driver.get_screenshot_as_png(), "淘宝截图", allure.attachment_type.PNG)
+    def test03(self):   
         print('\n你别过来啊')
 
     @allure.severity(allure.severity_level.MINOR)
