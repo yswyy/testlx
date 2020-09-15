@@ -4,15 +4,10 @@ from selenium import webdriver
 
 class Test01:
 
-    def setup_class(self):
-        self.driver = webdriver.Chrome
-        self.driver.get('http://www.taobao.com')
-
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.step('第一步')
     def test01(self):
         print('\n你过来啊')
-         allure.attach(self.driver.get_screenshot_as_png(), "淘宝截图", allure.attachment_type.PNG)
 
     @allure.severity(allure.severity_level.CRITICAL)
     @allure.step('第二步')
