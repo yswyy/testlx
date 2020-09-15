@@ -5,7 +5,7 @@ from selenium import webdriver
 class Test01:
 
     def setup_class(self):
-        self.driver = webdriver.Firefox()
+        self.driver = webdriver.Chrome
         self.driver.get('http://www.taobao.com')
 
     @allure.severity(allure.severity_level.BLOCKER)
